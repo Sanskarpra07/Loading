@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Portfolio — Sanskar Man Pradhan</title>
+	<meta name="description" content="Personal portfolio — replace with your own description" />
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+	<!-- Font Awesome (icons) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+	<!-- Main stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="theme-color" content="#0a0a12">
+</head>
+<body class="theme-dark">
+	<!-- Skip link for accessibility -->
+	<a class="skip-link" href="#main">Skip to main content</a>
+
+	<!-- Page loader: animated logo -->
+	<!-- TODO: Replace logo animation if desired -->
+	<div id="page-loader" aria-hidden="false">
+		<div class="loader-inner">
+			<div class="logo">SMP</div>
+			<div class="loader-dot"></div>
+		</div>
+	</div>
+
+	<!-- Top scroll progress bar -->
+	<div id="scroll-progress" aria-hidden="true"></div>
+
+	<!-- === NAVBAR === -->
+	<!-- HTML comment placeholders below show text to replace -->
+	<header id="site-header" class="nav-blur" role="banner">
+		<nav class="navbar container" aria-label="Primary navigation">
+			<a href="#home" class="brand" aria-label="Homepage">
+				<span class="brand-initials">SMP</span>
+				<span class="brand-name">Sanskar Man Pradhan</span>
+			</a>
+			<button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+			<button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+				<span></span><span></span><span></span>
+			</button>
+			<ul class="nav-links" id="nav-links">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#timeline">Timeline</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#social">Social</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Floating hire-me button -->
+	<a id="hire-me" class="hire-me" href="#contact" aria-label="Hire me">Hire Me</a>
+
+	<!-- Custom cursor elements (desktop only) -->
+	<div id="cursor" aria-hidden="true"></div>
+	<div id="cursor-trail" aria-hidden="true"></div>
+
+	<!-- === HERO SECTION === -->
+	<main id="main">
+	<section id="home" class="hero-section" aria-labelledby="hero-heading">
+		<!-- Canvas background for particles/constellation -->
+		<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+		<div class="hero-inner container">
+			<div class="hero-left">
+				<h1 id="hero-heading" class="hero-title">
+					<span class="gradient-text">Sanskar Man Pradhan</span>
+				</h1>
+				<p class="hero-tagline">
+					I build beautiful web experiences.
+				</p>
+
+				<div class="typewriter" aria-hidden="false">
+					<span id="typewriter-text"></span><span class="cursor-blink">|</span>
+					<!-- TODO: Replace rotating taglines in js/main.js -->
+				</div>
+
+				<div class="hero-ctas">
+					<a class="btn primary" href="#projects">See My Work</a>
+					<a class="btn ghost" href="assets/CV-placeholder.pdf" download>Download CV</a>
+				</div>
+
+				<a href="#about" class="scroll-down" aria-label="Scroll down">
+					<span class="chev">⌄</span>
+				</a>
+			</div>
+
+			<aside class="hero-right">
+				<div class="profile-photo" role="img" aria-label="Profile photo">
+					<img src="assets/profile-photo.jpg" alt="Profile placeholder" loading="lazy" width="240" height="240">
+				</div>
+			</aside>
+		</div>
+	</section>
+
+	<!-- === ABOUT ME === -->
+	<!-- Add a comment above this section to indicate placeholders -->
+	<section id="about" class="about-section container fade-in-up" aria-labelledby="about-heading">
+		<!-- ABOUT SECTION -->
+		<h2 id="about-heading">About Me</h2>
+		<div class="about-grid">
+			<div class="about-photo glass">
+				<img src="assets/about-photo.jpg" alt="About photo placeholder" loading="lazy" width="400" height="400">
+			</div>
+			<div class="about-content">
+				<ul class="about-meta">
+					<li><strong>Birth date:</strong> 2005-05-13</li>
+					<li><strong>Hometown:</strong> Mangalbazzar</li>
+					<li><strong>Current city:</strong> Lalitpur, Nepal</li>
+				</ul>
+				<p class="about-paragraph">
+					I'm a BCA student and frontend developer with hands-on experience in WordPress, WooCommerce, and content management systems. I create and manage website content, including hotel-related content writing, and also work with tools like Photoshop to support visual design and layout. Alongside development, I'm currently learning React and improving my web development skills.
+				</p>
+
+				<div class="fun-facts">
+					<div class="stat">
+						<div class="count" data-target="1">0</div>
+						<div class="label">Years coding</div>
+					</div>
+					<div class="stat">
+						<div class="count" data-target="3">0</div>
+						<div class="label">Projects</div>
+					</div>
+					<div class="stat">
+						<div class="count" data-target="999">0</div>
+						<div class="label">Cups of coffee</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- === LIFE TIMELINE === -->
+	<section id="timeline" class="timeline-section container fade-in-up" aria-labelledby="timeline-heading">
+		<h2 id="timeline-heading">Life Timeline</h2>
+		<div class="timeline">
+			<!-- Each .timeline-item alternates left/right -->
+			<div class="timeline-line" aria-hidden="true"></div>
+
+			<article class="timeline-item left">
+				<div class="timeline-card glass">
+					<div class="icon">🎂</div>
+					<time>2005</time>
+					<h3>Where It All Began</h3>
+					<p>The beginning of my story.</p>
+				</div>
+			</article>
+
+			<article class="timeline-item right">
+				<div class="timeline-card glass">
+					<div class="icon">🏫</div>
+					<time>2021</time>
+					<h3>School Graduation 🏫</h3>
+					<p>Completed secondary education and built a foundation in academics and basic computer skills.</p>
+				</div>
+			</article>
+
+			<article class="timeline-item left">
+				<div class="timeline-card glass">
+					<div class="icon">🎓</div>
+					<time>2021</time>
+					<h3>College Journey Begins 🎓</h3>
+					<p>Joined Mega College for higher secondary education.</p>
+				</div>
+			</article>
+
+			<article class="timeline-item right">
+				<div class="timeline-card glass">
+					<div class="icon">🎓</div>
+					<time>2023</time>
+					<h3>College Graduation 🎓</h3>
+					<p>Successfully completed higher secondary studies from Mega College.</p>
+				</div>
+			</article>
+
+			<article class="timeline-item left">
+				<div class="timeline-card glass">
+					<div class="icon">💼</div>
+					<time>Aug 2023 - Nov 2023</time>
+					<h3>First Job 💼</h3>
+					<p>Worked as a Receptionist, gaining experience in communication, customer handling, and office operations.</p>
+				</div>
+			</article>
+
+			<article class="timeline-item right">
+				<div class="timeline-card glass">
+					<div class="icon">🎓</div>
+					<time>2023</time>
+					<h3>Bachelor's Degree Begins 🎓</h3>
+					<p>Enrolled in BCA (Bachelor in Computer Applications) at Mega College.</p>
+				</div>
+			</article>
+
+			<article class="timeline-item left">
+				<div class="timeline-card glass">
+					<div class="icon">💼</div>
+					<time>Aug 2024 - Present</time>
+					<h3>Professional Growth 💼</h3>
+					<p>Joined Longtail E-Media as a Content Writer.<br />
+Also involved in basic server management and technical tasks.</p>
+				</div>
+			</article>
+		</div>
+	</section>
+
+	<!-- === SKILLS & TECHNOLOGIES === -->
+	<section id="skills" class="skills-section container fade-in-up" aria-labelledby="skills-heading">
+	<h2 id="skills-heading">Skills & Technologies</h2>
+
+	<div class="skills-grid">
+		<!-- Languages -->
+		<div class="skills-group">
+			<h3>Languages</h3>
+			<ul class="skill-list">
+				<li>
+					<div class="skill-name">HTML <span class="skill-percent">70%</span></div>
+					<div class="skill-bar" data-percent="70"><div class="skill-bar-fill"></div></div>
+				</li>
+				<li>
+					<div class="skill-name">CSS <span class="skill-percent">50%</span></div>
+					<div class="skill-bar" data-percent="50"><div class="skill-bar-fill"></div></div>
+				</li>
+				<li>
+					<div class="skill-name">JavaScript <span class="skill-percent">40%</span></div>
+					<div class="skill-bar" data-percent="40"><div class="skill-bar-fill"></div></div>
+				</li>
+				<li>
+					<div class="skill-name">PHP (Basic) <span class="skill-percent">45%</span></div>
+					<div class="skill-bar" data-percent="45"><div class="skill-bar-fill"></div></div>
+				</li>
+			</ul> 
+		</div>
+
+		<!-- Technologies -->
+		<div class="skills-group">
+			<h3>Technologies</h3>
+			<ul class="skill-list">
+				<li>
+					<div class="skill-name">WordPress / WooCommerce <span class="skill-percent">65%</span></div>
+					<div class="skill-bar" data-percent="65"><div class="skill-bar-fill"></div></div>
+				</li>
+				<li>
+					<div class="skill-name">Responsive Design <span class="skill-percent">50%</span></div>
+					<div class="skill-bar" data-percent="50"><div class="skill-bar-fill"></div></div>
+				</li>
+				<li>
+					<div class="skill-name">SEO Basics<span class="skill-percent">55%</span></div>
+					<div class="skill-bar" data-percent="55"><div class="skill-bar-fill"></div></div>
+				</li>
+				<li>
+					<div class="skill-name">PHP (Basic Scripting)<span class="skill-percent">50%</span></div>
+					<div class="skill-bar" data-percent="50"><div class="skill-bar-fill"></div></div>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Tools -->
+		<div class="skills-group">
+			<h3>Tools</h3>
+			<div class="tool-badges">
+				<span class="badge"><i class="fa-brands fa-github"></i> GitHub</span>
+				<span class="badge">💻 Terminal / CLI</span>
+				<span class="badge">🎨 Figma</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Learning -->
+	<div class="learning-row">
+		<h4>Currently Learning</h4>
+		<div class="learning-badges">
+			<span class="badge learning">React</span>
+			<span class="badge learning">Advanced JavaScript</span>
+		</div>
+	</div>
+</section>
+
+	<!-- === PROJECTS / WORK === -->
+	<section id="projects" class="projects-section container fade-in-up" aria-labelledby="projects-heading">
+		<h2 id="projects-heading">Projects</h2>
+		<div class="project-filters">
+			<button class="filter active" data-filter="all">All</button>
+			<button class="filter" data-filter="web">Web</button>
+			<button class="filter" data-filter="design">Design</button>
+			<button class="filter" data-filter="other">Other</button>
+		</div>
+		<div class="projects-grid">
+			<!-- Project card template -->
+			<article class="project-card glass" data-category="web">
+				<div class="thumb" style="background-image: url('assets/thumb1.jpg')" role="img" aria-label="Project thumbnail"></div>
+				<div class="project-body">
+					<h3>Project One</h3>
+					<p>A beautiful web project.</p>
+					<div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">PHP</span></div>
+					<div class="project-ctas">
+						<a class="btn small" href="#">Live Demo</a>
+						<a class="btn small ghost" href="#">GitHub</a>
+					</div>
+				</div>
+			</article>
+			<article class="project-card glass" data-category="design">
+				<div class="thumb" style="background-image: url('assets/thumb2.jpg')" role="img" aria-label="Project thumbnail"></div>
+				<div class="project-body">
+					<h3>Project Two</h3>
+					<p>Design-focused case.</p>
+					<div class="tags"><span class="tag">Figma</span></div>
+					<div class="project-ctas">
+						<a class="btn small" href="#">Live Demo</a>
+						<a class="btn small ghost" href="#">GitHub</a>
+					</div>
+				</div>
+			</article>
+			<!-- <article class="project-card glass" data-category="web">
+				<div class="thumb" style="background-image: url('assets/thumb3.jpg')" role="img" aria-label="Project thumbnail"></div>
+				<div class="project-body">
+					<h3>Project Three</h3>
+					<p>A cool interactive app.</p>
+					<div class="tags"><span class="tag">JS</span></div>
+					<div class="project-ctas">
+						<a class="btn small" href="#">Live Demo</a>
+						<a class="btn small ghost" href="#">GitHub</a>
+					</div>
+				</div>
+			</article> -->
+		</div>
+	</section>
+
+	<!-- === SOCIAL MEDIA & LINKS === -->
+	<section id="social" class="social-section container fade-in-up" aria-labelledby="social-heading">
+		<h2 id="social-heading">Connect</h2>
+		<div class="social-grid">
+			<article class="social-card glass">
+				<div class="icon">&#x1F5C3;</div>
+				<h3>GitHub</h3>
+				<p>Sanskarpra07</p>
+				<a class="btn small" href="https://github.com/Sanskarpra07" target="_blank">Visit Profile</a>
+			</article>
+			<article class="social-card glass">
+				<div class="icon">in</div>
+				<h3>LinkedIn</h3>
+				<p>Sanskar Pradhan</p>
+				<a class="btn small" href="https://www.linkedin.com/in/sanskar-pradhan-246622282/">Visit Profile</a>
+			</article>
+			<!-- <article class="social-card glass">
+				<div class="icon">🐦</div>
+				<h3>Twitter/X</h3>
+				<p>@yourhandle</p>
+				<a class="btn small" href="#">Visit Profile</a>
+			</article> -->
+			<!-- <article class="social-card glass qr">
+				<div class="qr-placeholder">QR</div>
+				<h3>Scan to connect</h3>
+				<p>Open QR with your phone.</p>
+			</article> -->
+		</div>
+	</section>
+
+	<!-- === TESTIMONIALS === -->
+	<!-- <section id="testimonials" class="testimonials-section container fade-in-up" aria-labelledby="testimonials-heading">
+		<h2 id="testimonials-heading">Testimonials</h2>
+		<div class="carousel" aria-roledescription="carousel">
+			<div class="slides">
+				<div class="slide active glass">
+					<p class="quote">“An amazing collaborator.”</p>
+					<div class="who">— Jane Doe, Designer</div>
+				</div>
+				<div class="slide glass">
+					<p class="quote">“Reliable and talented.”</p>
+					<div class="who">— John Smith, CTO</div>
+				</div>
+				<div class="slide glass">
+					<p class="quote">“Delivers exceptional results.”</p>
+					<div class="who">— Alex Lee, PM</div>
+				</div>
+			</div>
+			<div class="carousel-dots" role="tablist"></div>
+		</div>
+	</section> -->
+
+	<!-- === CONTACT SECTION === -->
+	<section id="contact" class="contact-section container fade-in-up" aria-labelledby="contact-heading">
+		<h2 id="contact-heading">Contact</h2>
+		<div class="contact-grid">
+			<div class="contact-details glass">
+				<h3>Get in touch</h3>
+				<p><strong>Email:</strong> pradhansanskar86@gmail.com</p>
+				<p><strong>Phone:</strong> +123456789</p>
+				<p><strong>Location:</strong> Lalitpur, Nepal</p>
+				<div class="map-placeholder"> Map iframe placeholder</div>
+			</div>
+
+			<form id="contact-form" class="contact-form glass" novalidate>
+				<div class="form-row">
+					<label for="name">Name</label>
+					<input id="name" name="name" type="text" required>
+				</div>
+				<div class="form-row">
+					<label for="email">Email</label>
+					<input id="email" name="email" type="email" required>
+				</div>
+				<div class="form-row">
+					<label for="subject">Subject</label>
+					<input id="subject" name="subject" type="text">
+				</div>
+				<div class="form-row">
+					<label for="message">Message</label>
+					<textarea id="message" name="message" rows="5" required></textarea>
+				</div>
+				<div class="form-row form-actions">
+					<button type="submit" class="btn primary">Send Message</button>
+					<div id="form-status" role="status" aria-live="polite"></div>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<!-- === FOOTER === -->
+	<footer class="site-footer container" role="contentinfo">
+		<div class="footer-inner">
+			<div>
+				<div class="brand-footer">Your Name</div>
+				<div class="tagline">Built with ❤️</div>
+			</div>
+			<nav class="footer-nav" aria-label="Footer">
+				<a href="#home">Home</a>
+				<a href="#projects">Projects</a>
+				<a href="#contact">Contact</a>
+			</nav>
+			<div class="social-row">
+				<a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+				<a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<small>Built with love by <!-- REPLACE: Your Name -->Your Name • <span id="year"></span></small>
+			<button id="back-to-top" class="icon-btn" aria-label="Back to top">↑</button>
+		</div>
+	</footer>
+
+	</main>
+
+	<!-- Scripts -->
+	<script src="js/main.js" defer></script>
+</body>
+</html>
